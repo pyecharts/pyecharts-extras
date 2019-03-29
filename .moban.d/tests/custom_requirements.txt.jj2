@@ -1,4 +1,6 @@
 {% extends "tests/requirements.txt.jj2" %}
 
 {%block extras %}
+black;python_version>="3.6"
+isort;python_version>="3.6"
 {%endblock%}
