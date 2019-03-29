@@ -1,0 +1,12 @@
+name: "pyecharts-extras"
+organisation: "chfw"
+author: "C.W."
+contact: "wangc_2011@hotmail.com"
+company: "C.W."
+version: "0.0.1"
+current_version: "0.0.1"
+release: "0.0.0"
+copyright_year: 2019
+license: MIT
+dependencies: []
+description: "Draw speciaized graphs using pyecharts"
