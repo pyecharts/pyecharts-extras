@@ -3,6 +3,9 @@ from pyecharts.charts.map import Map
 
 
 class ChoroplethMap(Map):
+    def get_series_options(self, index):
+        return self._option['series'][index]
+
     def add(self, name, attr, value, choropleth_legend,
             maptype='china',
             is_roam=True,
