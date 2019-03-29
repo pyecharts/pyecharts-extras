@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import os
 import codecs
 
-from pyecharts import ChoroplethMap
+from pyecharts_extras import ChoroplethMap
 
 
 def test_choropleth_map():
