@@ -1,8 +1,14 @@
 requires:
-  - pypi-mobans-pkg==0.0.4
+  - type: git
+    url: https://github.com/moremoban/pypi-mobans
+    submodule: true
+  - type: git
+    url: https://github.com/pyecharts/pyecharts-mobans
 configuration:
+  configuration_dir: "pyecharts-mobans:config"
   template_dir:
-  - "pypi-mobans-pkg:templates"
+  - "pyecharts-mobans:templates"
+  - "pypi-mobans:templates"
   - ".moban.d"
   configuration: pyecharts-extras.yml
 targets:
@@ -16,3 +22,6 @@ targets:
   - .gitignore: gitignore.jj2
   - .travis.yml: travis.yml.jj2
   - Pipfile: Pipfile.jj2
+  - output: CHANGELOG.rst
+    template: CHANGELOG.rst.jj2
+  - lint.sh: lint.script.jj2
