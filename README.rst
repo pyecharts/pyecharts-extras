@@ -13,10 +13,24 @@ pyecharts-extras
    :target: http://pyecharts-extras.readthedocs.org/en/latest/
 
 
+It draws Choropleth Map simply. It uses pyecharts 0.5.11 and will not work with pyecharts 1.0.0 for now.
+
+.. image:: https://user-images.githubusercontent.com/4280312/56307125-0d43f400-613c-11e9-89e2-092664b1757d.png
+
+
+
 Installation
 ================================================================================
 
-You can get it:
+
+You can install pyecharts-extras via pip:
+
+.. code-block:: bash
+
+    $ pip install pyecharts-extras
+
+
+or clone it and install it:
 
 .. code-block:: bash
 
