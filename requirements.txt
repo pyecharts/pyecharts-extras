@@ -1,1 +1,1 @@
-pyecharts==0.5.11
+pyecharts>=1.0.0

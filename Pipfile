@@ -7,7 +7,7 @@ name = 'pypi'
 python_version= '3.6'
 
 [packages]
-    pyecharts==0.5.11
+pyecharts = '>=1.0.0'
 
 [dev-packages]
 nose = "*"
