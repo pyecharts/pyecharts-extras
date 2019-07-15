@@ -1,16 +1,22 @@
 overrides: "pyecharts.yml"
 name: "pyecharts-extras"
-version: "0.0.2"
-current_version: "0.0.2"
-release: "0.0.2"
+version: "0.0.3"
+current_version: "0.0.3"
+release: "0.0.3"
 copyright_year: 2019
 license: MIT
 dependencies:
-  - pyecharts>=1.0.0
+  - pyecharts>=1.3.1
 description: "Draw speciaized graphs using pyecharts"
 releases:
 - changes:
-  - action: first release
+  - action: maintenance release
+    details:
+    - it use pyecharts 1.3 to draw ChoroplethMap
+  version: 0.0.3
+  date: 15.07.2019
+- changes:
+  - action: second release
     details:
     - it use pyecharts 1.x to draw ChoroplethMap
   version: 0.0.2

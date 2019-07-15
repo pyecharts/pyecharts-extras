@@ -26,14 +26,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "pyecharts-extras"
 AUTHOR = "pyecharts dev team"
-VERSION = "0.0.2"
+VERSION = "0.0.3"
 EMAIL = "info@pyecharts.com"
 LICENSE = "MIT"
 DESCRIPTION = (
     "Draw speciaized graphs using pyecharts"
 )
 URL = "https://github.com/pyecharts/pyecharts-extras"
-DOWNLOAD_URL = "%s/archive/0.0.2.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.0.3.tar.gz" % URL
 FILES = ["README.rst", "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -59,7 +59,7 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIRES = [
-    "pyecharts>=1.0.0",
+    "pyecharts>=1.3.1",
 ]
 SETUP_COMMANDS = {}
 
@@ -69,8 +69,8 @@ EXTRAS_REQUIRE = {
 }
 # You do not need to read beyond this line
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
-GS_COMMAND = ("gs pyecharts-extras v0.0.2 " +
-              "Find 0.0.2 in changelog for more details")
+GS_COMMAND = ("gs pyecharts-extras v0.0.3 " +
+              "Find 0.0.3 in changelog for more details")
 NO_GS_MESSAGE = ("Automatic github release is disabled. " +
                  "Please install gease to enable it.")
 UPLOAD_FAILED_MSG = (
