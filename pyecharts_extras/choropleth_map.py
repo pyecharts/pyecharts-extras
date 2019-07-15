@@ -1,6 +1,6 @@
 # coding=utf-8
 from pyecharts import options as opts
-from pyecharts.commons.types import Union, Optional, Sequence, Numeric
+from pyecharts.types import Union, Optional, Sequence, Numeric
 from pyecharts.charts import Map
 
 
