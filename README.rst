@@ -13,9 +13,9 @@ pyecharts-extras
    :target: http://pyecharts-extras.readthedocs.org/en/latest/
 
 
-It draws Choropleth Map simply. It uses pyecharts 0.5.11 and will not work with pyecharts 1.0.0 for now.
+It draws Choropleth Map simply. Latest version works with pyecharts 1.3.1.
 
-.. image:: https://user-images.githubusercontent.com/4280312/56307125-0d43f400-613c-11e9-89e2-092664b1757d.png
+.. image:: https://user-images.githubusercontent.com/4280312/61274388-a0281500-a7a3-11e9-9501-27e8a1659bd0.png
 
 
 
