@@ -11,7 +11,6 @@ python:
 stages:
   - test
   - lint
-  - moban
 
 .disable_global: &disable_global
   addons: false
@@ -35,15 +34,6 @@ stages:
   stage: lint
   install: pip install flake8
   script: flake8
-
-.moban: &moban
-  <<: *disable_global
-  python: 3.6
-  stage: moban
-  install: pip install moban>=0.0.4
-  script:
-    - moban
-    - git diff --exit-code
 
 jobs:
   include:

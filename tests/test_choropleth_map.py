@@ -19,16 +19,20 @@ def test_choropleth_map():
         {"tag": "C", "label": "test c", "color": "green"},
         {"tag": "THIS_KEY_IS_NOT_IN_HTML", "label": "test d", "color": "red"},
     ]
-    map = ChoroplethMap(init_opts=opts.InitOpts(width="1200px", height="600px"))
-    map.set_global_opts(title_opts=opts.TitleOpts(
-         title="Choropleth map - 等值区域图示例"
-         ))
-    map.add("",
-            data_pair=zip(attr, value),
-            choropleth_legend=legends,
-            maptype="china",
-            is_map_symbol_show=False,
-            label_opts=opts.LabelOpts(is_show=False))
+    map = ChoroplethMap(
+        init_opts=opts.InitOpts(width="1200px", height="600px")
+    )
+    map.set_global_opts(
+        title_opts=opts.TitleOpts(title="Choropleth map - 等值区域图示例")
+    )
+    map.add(
+        "",
+        data_pair=zip(attr, value),
+        choropleth_legend=legends,
+        maptype="china",
+        is_map_symbol_show=False,
+        label_opts=opts.LabelOpts(is_show=False),
+    )
     map.render()
     content = get_default_rendering_file_content()
     assert "piecewise" in content
