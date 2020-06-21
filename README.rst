@@ -7,7 +7,14 @@ pyecharts-extras
 
 .. image:: https://codecov.io/github/pyecharts/pyecharts-extras/coverage.png
    :target: https://codecov.io/github/pyecharts/pyecharts-extras
+.. image:: https://badge.fury.io/py/pyecharts-extras.svg
+   :target: https://pypi.org/project/pyecharts-extras
 
+.. image:: https://pepy.tech/badge/pyecharts-extras/month
+   :target: https://pepy.tech/project/pyecharts-extras/month
+
+.. image:: https://img.shields.io/github/stars/pyecharts/pyecharts-extras.svg?style=social&maxAge=3600&label=Star
+    :target: https://github.com/pyecharts/pyecharts-extras/stargazers
 
 .. image:: https://readthedocs.org/projects/pyecharts-extras/badge/?version=latest
    :target: http://pyecharts-extras.readthedocs.org/en/latest/

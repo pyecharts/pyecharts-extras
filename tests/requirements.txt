@@ -1,7 +1,10 @@
 nose
-mock
+mock;python_version<"3"
 codecov
 coverage
 flake8
-black;python_version>="3.6"
-isort;python_version>="3.6"
+black
+isort
+collective.checkdocs
+pygments
+moban
