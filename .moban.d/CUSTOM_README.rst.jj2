@@ -1,5 +1,8 @@
 {% extends 'README.rst.jj2' %}
 
+{% block documentation_link %}
+{% endblock %}
+
 {% block features %}
 
 It draws Choropleth Map simply. Latest version works with pyecharts 1.3.1.

@@ -16,8 +16,6 @@ pyecharts-extras
 .. image:: https://img.shields.io/github/stars/pyecharts/pyecharts-extras.svg?style=social&maxAge=3600&label=Star
     :target: https://github.com/pyecharts/pyecharts-extras/stargazers
 
-.. image:: https://readthedocs.org/projects/pyecharts-extras/badge/?version=latest
-   :target: http://pyecharts-extras.readthedocs.org/en/latest/
 
 
 It draws Choropleth Map simply. Latest version works with pyecharts 1.3.1.

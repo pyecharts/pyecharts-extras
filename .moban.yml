@@ -1,6 +1,7 @@
 configuration:
   configuration_dir: "git://github.com/pyecharts/pyecharts-mobans!/config"
   template_dir:
+  - "git://github.com/moremoban/pypi-mobans?branch=dev&submodule=True!/statics"
   - "git://github.com/moremoban/pypi-mobans?branch=dev&submodule=True!/templates"
   - "git://github.com/pyecharts/pyecharts-mobans!/templates"
   - ".moban.d"
@@ -20,3 +21,5 @@ targets:
   - Makefile: Makefile.jj2
   - tests/requirements.txt: tests/requirements.txt.jj2
   - format.sh: format.sh.jj2
+  - ".github/workflows/pythonpublish.yml": "pythonpublish.yml"
+  - ".github/workflows/moban-update.yml": "moban-update.yml"
