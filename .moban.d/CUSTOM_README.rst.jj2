@@ -39,7 +39,7 @@ Usage of TimeYAxisDateXAxis:
    chart.render_notebook()
 
 
-.. images:: https://user-images.githubusercontent.com/4280312/92336798-73684880-f09c-11ea-9dee-af30a64c65f4.png
+.. image:: https://user-images.githubusercontent.com/4280312/92336798-73684880-f09c-11ea-9dee-af30a64c65f4.png
 
 
 2. ChoroplethMap
