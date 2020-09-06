@@ -1,6 +1,9 @@
 {% extends 'README.rst.jj2' %}
 
 {% block documentation_link %}
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/pyecharts/pyecharts-extras/master?filepath=examples
+
 {% endblock %}
 
 {% block features %}
