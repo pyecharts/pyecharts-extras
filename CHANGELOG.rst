@@ -1,17 +1,24 @@
 Change log
 ================================================================================
 
+0.0.4 - 06.09.2020
+--------------------------------------------------------------------------------
+
+**Added**
+
+#. it scatters event over time vs date chart so as to spot patterns in events.
+
 0.0.3 - 15.07.2019
 --------------------------------------------------------------------------------
 
-**maintenance release**
+**Updated**
 
 #. it use pyecharts 1.3 to draw ChoroplethMap
 
 0.0.2 - 09.06.2019
 --------------------------------------------------------------------------------
 
-**second release**
+**Updated**
 
 #. it use pyecharts 1.x to draw ChoroplethMap
 
