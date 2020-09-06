@@ -8,7 +8,9 @@
 
 {% block features %}
 
-It draws Choropleth Map simply. Latest version works with pyecharts 1.3.1.
+It draws Choropleth Map simply. Latest version works with pyecharts 1.3.1+.
+
+Please launch the binder to get an interactive jupyter notebook running. Here is a screenshoot:
 
 .. image:: https://user-images.githubusercontent.com/4280312/61274388-a0281500-a7a3-11e9-9501-27e8a1659bd0.png
 

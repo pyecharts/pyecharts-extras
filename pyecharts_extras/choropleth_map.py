@@ -1,10 +1,9 @@
 from pyecharts import options as opts
-from pyecharts.types import Sequence
 from pyecharts.charts import Map
+from pyecharts.types import Sequence
 
 
 class ChoroplethMap(Map):
-
     def add(
         self,
         series_name: str,
@@ -42,14 +41,11 @@ class ChoroplethMap(Map):
             is_piecewise=True,
             range_text=["Legend"],
             range_color=_piece_colors,
-            pieces=_piece_specs
+            pieces=_piece_specs,
         )
         self.options.update(visualMap=custom)
 
         super(ChoroplethMap, self).add(
-            series_name,
-            _new_data_pair,
-            maptype,
-            **kwds
+            series_name, _new_data_pair, maptype, **kwds
         )
         return self
