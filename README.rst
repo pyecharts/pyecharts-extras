@@ -33,7 +33,7 @@ Usage of TimeYAxisDateXAxis:
 .. code-block:: python
 
    import pyecharts.options as opts
-   from pyecharts_extras.date_time import TimeYAxisDateXAxis
+   from pyecharts_extras.date_time import TimeYAxisDateXAxis, DateAxisOpts, TimeAxisOpts
    from datetime import datetime
    
    data = [
@@ -47,12 +47,16 @@ Usage of TimeYAxisDateXAxis:
    ]
    
    chart = TimeYAxisDateXAxis(init_opts=opts.InitOpts(height="1000px"))
+   chart.set_global_opts(
+            xaxis_opts=DateAxisOpts(axis_data=all_dates),
+            yaxis_opts=TimeAxisOpts(),
+            tooltip_opts=opts.TooltipOpts(is_show=False))   
    chart.add_data('A', data, symbol_size=10)
    chart.add_data('B', data2, symbol_size=20)
    chart.render_notebook()
 
 
-.. image:: https://user-images.githubusercontent.com/4280312/92336798-73684880-f09c-11ea-9dee-af30a64c65f4.png
+.. image:: https://user-images.githubusercontent.com/4280312/92998125-f6abf300-f50f-11ea-962a-78d87b85b03a.png
 
 
 2. ChoroplethMap
