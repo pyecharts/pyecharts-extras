@@ -16,7 +16,7 @@ releases:
   - action: Fixed
     details:
     - time date scatter plot failed to display different sets of data
-  version: 0.0.4
+  version: 0.0.5
   date: 12.09.2020
 - changes:
   - action: Added
