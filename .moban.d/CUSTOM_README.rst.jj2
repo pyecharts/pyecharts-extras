@@ -32,7 +32,8 @@ Usage of TimeYAxisDateXAxis:
        datetime(2020,9,1,1,11,11),
        ...
    ]
-   
+   all_data = data1 + data2
+   all_dates = sorted(list(set([str(d.date()) for d in all_data])))
    chart = TimeYAxisDateXAxis(init_opts=opts.InitOpts(height="1000px"))
    chart.set_global_opts(
             xaxis_opts=DateAxisOpts(axis_data=all_dates),
