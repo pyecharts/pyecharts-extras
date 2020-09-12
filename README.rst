@@ -56,7 +56,7 @@ Usage of TimeYAxisDateXAxis:
    chart.render_notebook()
 
 
-.. image:: https://user-images.githubusercontent.com/4280312/92998125-f6abf300-f50f-11ea-962a-78d87b85b03a.png
+.. image:: https://user-images.githubusercontent.com/4280312/92998181-4b4f6e00-f510-11ea-9b0a-963a83f64e04.png
 
 
 2. ChoroplethMap
