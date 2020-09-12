@@ -1,4 +1,3 @@
-from collections import defaultdict
 from datetime import timedelta
 
 import pyecharts.options as opts
@@ -35,7 +34,7 @@ DEFAULT_TIME_AXIS_SPLIT_LINE = opts.SplitLineOpts(is_show=True)
 class TimeAxisOpts(opts.AxisOpts):
     def __init__(
         self,
-        type_: Optional[str] = None,
+        type_: Optional[str] = "value",
         name: Optional[str] = None,
         is_show: bool = True,
         is_scale: bool = False,
@@ -132,7 +131,12 @@ class DateAxisOpts(opts.AxisOpts):
         minor_split_line_opts: Union[
             MinorSplitLineOpts, dict, None
         ] = SplitLineOpts(is_show=True),
+        axis_data=None,
     ):
+        # date_min = time.mktime(min_.timetuple())
+        # date_max = time.mktime(max_.timetuple())
+        date_min = min_
+        date_max = max_
         super().__init__(
             type_=type_,
             name=name,
@@ -153,8 +157,8 @@ class DateAxisOpts(opts.AxisOpts):
             offset=offset,
             split_number=split_number,
             boundary_gap=boundary_gap,
-            min_=min_,
-            max_=max_,
+            min_=date_min,
+            max_=date_max,
             min_interval=min_interval,
             max_interval=max_interval,
             splitline_opts=splitline_opts,
@@ -162,42 +166,14 @@ class DateAxisOpts(opts.AxisOpts):
             minor_tick_opts=minor_tick_opts,
             minor_split_line_opts=minor_split_line_opts,
         )
+        self.opts["data"] = axis_data
 
 
 class TimeYAxisDateXAxis(RectChart):
     def __init__(self, init_opts: types.Init = opts.InitOpts()):
         super().__init__(init_opts=init_opts)
-        self.set_global_opts(
-            yaxis_opts=TimeAxisOpts(), xaxis_opts=DateAxisOpts()
-        )
 
-    def add_data(self, series_name, data, symbol_size=None):
-        data = sorted(data)
-        dates_dict = defaultdict(list)
-        max = 0
-        for d in data:
-            dates_dict[d.date()].append(d)
-            if len(dates_dict[d.date()]) > max:
-                max = len(dates_dict[d.date()])
-        data_array = []
-        for i in range(max):
-            for item in dates_dict.items():
-                try:
-                    data_array.append(item[i])
-                except IndexError:
-                    pass
-
-        for row in data_array:
-            x_data = [str(d.date()) for d in data]
-            y_data = [d.time() for d in data]
-            self.add_xaxis(xaxis_data=x_data).add_yaxis(
-                series_name=series_name,
-                y_axis=y_data,
-                symbol_size=symbol_size,
-                label_opts=opts.LabelOpts(is_show=False),
-            )
-
-    def add_yaxis(
+    def add_data(
         self,
         series_name: str,
         y_axis: list,
@@ -209,7 +185,7 @@ class TimeYAxisDateXAxis(RectChart):
         symbol: types.Optional[str] = None,
         symbol_size: types.Union[types.Numeric, types.Sequence] = 10,
         symbol_rotate: types.Optional[types.Numeric] = None,
-        label_opts: types.Label = opts.LabelOpts(position="right"),
+        label_opts: types.Label = opts.LabelOpts(is_show=False),
         markpoint_opts: types.MarkPoint = None,
         markline_opts: types.MarkLine = None,
         markarea_opts: types.MarkArea = None,
@@ -219,12 +195,15 @@ class TimeYAxisDateXAxis(RectChart):
     ):
         self._append_color(color)
         self._append_legend(series_name, is_selected)
-
+        pair = [[d.date(), d.time()] for d in y_axis]
         data = [
-            timedelta(
-                hours=t.hour, minutes=t.minute, seconds=t.second
-            ).total_seconds()
-            for t in y_axis
+            (
+                str(t[0]),
+                timedelta(
+                    hours=t[1].hour, minutes=t[1].minute, seconds=t[1].second
+                ).total_seconds(),
+            )
+            for t in pair
         ]
 
         self.options.get("series").append(

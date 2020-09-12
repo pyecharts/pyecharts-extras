@@ -1,8 +1,8 @@
 overrides: "pyecharts.yml"
 name: "pyecharts-extras"
-version: "0.0.4"
-current_version: "0.0.4"
-release: "0.0.4"
+version: "0.0.5"
+current_version: "0.0.5"
+release: "0.0.5"
 copyright_year: 2019-2020
 license: MIT
 dependencies:
@@ -12,6 +12,12 @@ nodocs: true
 lint_command: make lint
 moban_command: false
 releases:
+- changes:
+  - action: Fixed
+    details:
+    - time date scatter plot failed to display different sets of data
+  version: 0.0.4
+  date: 12.09.2020
 - changes:
   - action: Added
     details:
